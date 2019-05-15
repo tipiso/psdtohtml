@@ -1,0 +1,15 @@
+{
+  "name": "psdtohtml",
+  "version": "1.0.0",
+  "description": "psdtohtml",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Artur Sokalski",
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.12.0"
+  }
+}

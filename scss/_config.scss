@@ -1,0 +1,80 @@
+@mixin button-style{
+    cursor: pointer;
+   font-family: 'Damion', cursive;
+   letter-spacing: 2px;
+   width: 250px;
+   font-size: 2rem;
+   color: white;
+   border: none;
+   border-radius: 2px;
+   }
+   
+   @mixin paragraph-style{
+       font-size: 1.3rem;
+       display: block;
+       width: 100%;
+       padding: 2rem 0;
+       text-align: center;
+       color: darken(#c5c5c5, 20);
+   }
+   
+   @mixin grid-wrapper{
+       width: $section-width;
+       height: $section-height;
+       padding-top: $margin-between-sections;
+       padding-bottom: $margin-between-sections;
+       margin: 0 auto;
+       grid-template-rows: 10% 30% auto;
+       display: grid;
+   }
+   
+   @mixin header-style{
+               font-weight: 400;
+               align-self: end;
+               font-size: 2rem;
+               width: 100%;
+               padding-bottom: 1rem;
+               color: darken(#c5c5c5, 20);
+               position: relative;
+               text-align: center;
+               display: block;
+   
+               &:before{
+                   content: '';
+                   position: absolute;
+                   border-bottom: #00b4c3 solid 4px;
+                   width: 60px;
+                   bottom: 0;
+                   left: 50%;
+                   transform: translateX(-50%);
+               }
+   }
+   
+   $section-height: 80vh;
+   $section-width: 80%;
+   $margin-between-sections: 4rem;
+
+//Media Query Mixins
+@mixin mediaSm{
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+@mixin mediaMd{
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin mediaLg{
+    @media screen and (min-width: 769px) and (max-width: 1170px){
+        @content;
+    }
+}
+
+@mixin mediaXl{
+    @media screen and (min-width: 1171px) and (max-width: 1600px){
+        @content;
+    }
+}
